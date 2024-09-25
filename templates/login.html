@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="{% url 'login'%}" method="POST">{%csrf_token %}
+<div class="form-floating mb-3">
+    <label for="floatingInput">Email address</label>
+    <input type="email" class="form-control" id="email" >
+    
+  </div>
+  <div class="form-floating">
+    <label for="floatingPassword">Password</label>
+    <input type="password" class="form-control" id="Password" >
+    
+  </div>
+  <button type="submit" >submit</button>
+</form>
+
+
+{% endblock content %}
